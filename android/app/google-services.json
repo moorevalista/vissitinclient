@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "967039204775",
+    "project_id": "client-vissitin",
+    "storage_bucket": "client-vissitin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967039204775:android:aab370853726ad23a2ca82",
+        "android_client_info": {
+          "package_name": "com.vissitinclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967039204775-k04c3dmijgltbtfve4m8phb2c59o6f3p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH28UWJk1aoKC98_-et5U1euzChn8g7fM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967039204775-k04c3dmijgltbtfve4m8phb2c59o6f3p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

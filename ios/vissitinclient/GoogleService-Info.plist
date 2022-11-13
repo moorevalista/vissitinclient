@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>967039204775-tkuo1j3poee4c6cu5r7frmk0hsc7bijc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.967039204775-tkuo1j3poee4c6cu5r7frmk0hsc7bijc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCbXdCqKufpZJGnhstzdPHEn683ILLm9U8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>967039204775</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>client.vissit.in</string>
+	<key>PROJECT_ID</key>
+	<string>client-vissitin</string>
+	<key>STORAGE_BUCKET</key>
+	<string>client-vissitin.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:967039204775:ios:8dc81ceebd8fd05ba2ca82</string>
+</dict>
+</plist>

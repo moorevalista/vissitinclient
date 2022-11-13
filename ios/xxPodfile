@@ -1,0 +1,59 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '13.0'
+
+target 'vissitinclient' do
+
+  # Add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+
+  # For Analytics without IDFA collection capability, use this pod instead
+  # pod 'Firebase/AnalyticsWithoutAdIdSupport'
+
+  # Add the pods for any other Firebase products you want to use in your app
+  # For example, to use Firebase Authentication and Cloud Firestore
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  
+  pod 'Firebase', :modular_headers => true
+  pod 'FirebaseCore', :modular_headers => true
+  pod 'GoogleUtilities', :modular_headers => true
+  $RNFirebaseAsStaticFramework = true
+
+  # React Native Maps dependencies
+  rn_maps_path = '../node_modules/react-native-maps'
+  pod 'react-native-google-maps', :path => rn_maps_path
+
+  #Barcode scanner
+  pod 'react-native-camera', path: '../node_modules/react-native-camera', subspecs: [
+    'BarcodeDetectorMLKit'
+  ]
+
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change 'false' to 'true' and then install pods
+    :hermes_enabled => false
+  )
+
+  target 'vissitinclientTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable the next line.
+#  use_flipper!()
+
+  post_install do |installer|
+    react_native_post_install(installer)
+    __apply_Xcode_12_5_M1_post_install_workaround(installer)
+      installer.pods_project.build_configurations.each do |config|
+        config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+      end
+  end
+end
